@@ -1,0 +1,2 @@
+const mongoose=require('mongoose');
+module.exports=mongoose.model('CatGallery',new mongoose.Schema({catId:String,imageUrl:String,note:String,user:{type:mongoose.Schema.Types.ObjectId,ref:'User'}},{timestamps:true}));

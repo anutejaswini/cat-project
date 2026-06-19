@@ -1,0 +1,2 @@
+const r=require('express').Router(); const c=require('../controller/catController'); const a=require('../middleware/authMiddleware');
+r.get('/random',c.getCats); r.post('/gallery',a,c.create); r.get('/gallery',c.all); r.get('/gallery/:id',c.one); r.put('/gallery/:id',a,c.update); r.delete('/gallery/:id',a,c.remove); module.exports=r;
